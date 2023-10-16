@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-ConsisanetApplication<consisanet>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.erudio.consisanet.ConsisanetApplication",
+      "projectName": "consisanet",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

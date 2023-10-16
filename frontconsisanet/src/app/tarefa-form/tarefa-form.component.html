@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Criar Nova Tarefa</h2>
+
+  <form (submit)="salvarTarefa()">
+    <div class="form-group">
+      <label for="nomeTarefa">Nome da Tarefa</label>
+      <input type="text" id="nomeTarefa" class="form-control" [(ngModel)]="tarefa.nomeTarefa" name="nomeTarefa" required>
+    </div>
+
+    <div class="form-group">
+      <label for="dataInicio">Data de Início</label>
+      <input type="date" id="dataInicio" class="form-control" [(ngModel)]="tarefa.dataInicio" name="dataInicio" required>
+    </div>
+
+    <div class="form-group">
+      <label for="dataFim">Data de Fim</label>
+      <input type="date" id="dataFim" class="form-control" [(ngModel)]="tarefa.dataFim" name="dataFim" required>
+    </div>
+
+    <div class="form-group">
+      <label for="usuarioResponsavel">Usuário Responsável</label>
+      <input type="text" id="usuarioResponsavel" class="form-control" [(ngModel)]="tarefa.usuarioResponsavel" name="usuarioResponsavel" required>
+    </div>
+
+    <div class="form-group">
+      <label for="situacaoTarefa">Situação da Tarefa</label>
+      <select id="situacaoTarefa" class="form-control" [(ngModel)]="tarefa.situacaoTarefa" name="situacaoTarefa" required>
+        <option value="AGUARDANDO">Aguardando</option>
+        <option value="INICIADA">Iniciada</option>
+        <option value="ENCERRADA">Encerrada</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </form>
+</div>

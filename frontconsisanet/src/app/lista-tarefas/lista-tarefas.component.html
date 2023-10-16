@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Lista de Tarefas</h2>
+
+  <div class="filtro">
+    <label for="filtroDataInicio">Filtrar por Data de Início:</label>
+    <input type="date" id="filtroDataInicio" [(ngModel)]="dataInicio" (change)="filtrarTarefas()">
+    <label for="filtroDataFim">até</label>
+    <input type="date" id="filtroDataFim" [(ngModel)]="dataFim" (change)="filtrarTarefas()">
+
+    <label for="filtroAtrasadas">Filtrar Tarefas Atrasadas:</label>
+    <input type="checkbox" id="filtroAtrasadas" [(ngModel)]="atrasadas" (change)="filtrarTarefas()">
+
+    <!-- Adicione outros controles de filtro conforme necessário -->
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome da Tarefa</th>
+        <th>Data de Início</th>
+        <th>Data de Fim</th>
+        <th>Usuário Responsável</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tarefa of tarefas">
+        <td>{{ tarefa.nomeTarefa }}</td>
+        <td>{{ tarefa.dataInicio }}</td>
+        <td>{{ tarefa.dataFim }}</td>
+        <td>{{ tarefa.usuarioResponsavel }}</td>
+        <td>{{ tarefa.situacaoTarefa }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
