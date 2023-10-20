@@ -7,7 +7,7 @@ import { Tarefa } from './tarefa.model'; // Certifique-se de importar a classe T
   providedIn: 'root'
 })
 export class TarefaService {
-  private baseUrl = 'URL_DO_SEU_BACKEND/api/tarefas'; // Substitua pela URL real do seu backend
+  private baseUrl = 'http://localhost:8087/api/tarefas';
 
   constructor(private http: HttpClient) {}
 
